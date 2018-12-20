@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import TodoListTemplate from "./components/TodoListTemplate";
 import Form from "./components/Form";
 import TodoItemList from "./components/TodoItemList";
-import PaletteList from "./components/Palette";
+import PaletteList from "./components/PaletteList";
 /* import Palette from "./components/Palette"; */
 
 class App extends Component {

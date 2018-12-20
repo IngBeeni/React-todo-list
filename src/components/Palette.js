@@ -13,8 +13,9 @@ class Palette extends Component {
     console.log("Palette.js");
     console.log("Palette.js palette : " + color);
     return (
-      <div className="colors-item">
-        <div>{color} TEST</div>
+      <div className="palette">
+        {/* <div>{color}</div> */}
+        <div className="color" style={{ background: color }} />
       </div>
     );
   }

@@ -10,7 +10,8 @@ class PaletteList extends Component {
     const { colors } = this.props;
     console.log("PaletteList.js colors : " + colors);
     console.log("PaletteList.js colors : " + colors);
-    /* 3. 색상 ['#343a40', '#f03e3e', '#12b886', '#228ae6'] 를 Palette 컴포넌트의 props 로 전달하고, 이를 컴포넌트 배열로 변환하세요. */
+    /* 3. 색상 ['#343a40', '#f03e3e', '#12b886', '#228ae6'] 를 
+    Palette 컴포넌트의 props 로 전달하고, 이를 컴포넌트 배열로 변환하세요. */
     const colorList = colors.map(({ id, color }) => (
       <Palette id={id} color={color} key={id} />
     ));

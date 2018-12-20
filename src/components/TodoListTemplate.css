@@ -23,3 +23,11 @@
 .todos-wrapper {
   min-height: 5rem;
 }
+
+.palette-wrapper {
+  padding: 1rem;
+  background: rgb(233, 228, 228);
+  /* justify-content: space-between; */
+  display: flex;
+  flex-direction: row;
+}
