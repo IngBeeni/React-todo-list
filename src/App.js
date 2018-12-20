@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import TodoListTemplate from "./components/TodoListTemplate";
 import Form from "./components/Form";
 import TodoItemList from "./components/TodoItemList";
+import PaletteList from "./components/Palette";
+/* import Palette from "./components/Palette"; */
 
 class App extends Component {
   id = 3; // 이미 0,1,2 가 존재하므로 3으로 설정
@@ -9,9 +11,16 @@ class App extends Component {
   state = {
     input: "",
     todos: [
-      { id: 0, text: "리액트 소개", checked: false },
-      { id: 1, text: "리액트 소개", checked: true },
-      { id: 2, text: "리액트 소개", checked: false }
+      { id: 0, text: "빨래하기", checked: false },
+      { id: 1, text: "공부하기", checked: true },
+      { id: 2, text: "보컬가기", checked: false }
+    ],
+    // 4.App 의 state 에 color 값을 추가하세요
+    colors: [
+      { id: 0, color: "#343a40" },
+      { id: 1, color: "#f03e3e" },
+      { id: 2, color: "#12b886" },
+      { id: 3, color: "#228ae6" }
     ]
   };
 
@@ -66,7 +75,7 @@ class App extends Component {
   };
 
   render() {
-    const { input, todos } = this.state;
+    const { input, todos, colors } = this.state;
     const {
       handleChange,
       handleCreate,
@@ -77,6 +86,8 @@ class App extends Component {
 
     return (
       <TodoListTemplate
+        palette={<PaletteList colors={colors} />}
+        //palette={}
         form={
           <Form
             value={input}
@@ -86,11 +97,14 @@ class App extends Component {
           />
         }
       >
+        {/* <PaletteList colors={colors} /> */}
         <TodoItemList
           todos={todos}
           onToggle={handleToggle}
           onRemove={handleRemove}
         />
+
+        {/* <Palette color={color} /> */}
       </TodoListTemplate>
     );
   }

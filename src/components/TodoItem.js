@@ -6,13 +6,14 @@ class TodoItem extends Component {
     return this.props.checked !== nextProps.checked;
   }
   render() {
-    const { text, checked, id, onToggle, onRemove } = this.props;
     /* text : todo 내용
      * checked : 체크박스 상태
      * id : todo 의 고유 아이디
      * onToggle: 체크박스를 키고 끄는 함수
      * onRemove : 아이템을 삭제 시키는 함수
      */
+    const { text, checked, id, onToggle, onRemove } = this.props;
+
     console.log(id);
     return (
       <div className="todo-item" onClick={() => onToggle(id)}>
