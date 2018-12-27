@@ -12,11 +12,20 @@ class PaletteList extends Component {
     console.log("PaletteList.js colors : " + colors);
     /* 3. 색상 ['#343a40', '#f03e3e', '#12b886', '#228ae6'] 를 
     Palette 컴포넌트의 props 로 전달하고, 이를 컴포넌트 배열로 변환하세요. */
+
+    // TodoListTemplate.css -> .palette-wrapper -> 이전 코드
+
     const colorList = colors.map(({ id, color }) => (
       <Palette id={id} color={color} key={id} />
     ));
     console.log("PaletteList.js colorList : " + colorList);
-    return <div>{colorList}</div>;
+    return <div className="palette-wrapper">{colorList}</div>;
+
+    //TodoListTemplate.css -> .palette-wrapper -> 픽스된코드
+
+    // return colors.map(({ id, color }) => (
+    //   <Palette id={id} color={color} key={id} />
+    // ));
   }
 }
 

@@ -7,8 +7,9 @@
     space-around: 요소들 주위에 동일한 간격을 둡니다. */
 
 .palette {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  margin: 1rem;
 }
 
 .color {
